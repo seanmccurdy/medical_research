@@ -1,10 +1,14 @@
 library(data.table)
 library(survival)
+
+#### data files can be downloaded from cancerbrowser
+####https://genome-cancer.ucsc.edu/download/public/HiSeqV2_PANCAN-2015-02-15.tgz
+#### TCGA_pancan_normalized_RNAseq_data_ver_feb06_2015.txt = genomic
+#### TCGA_pancan_clinical_data_ver_feb06_2015.txt = clinical
+
 setwd("~/Dropbox/Programs/databases")
 data2 <- fread("TCGA_pancan_normalized_RNAseq_data_ver_feb06_2015.txt", header=T, sep="\t", stringsAsFactors=F)
 genomic<-as.data.frame(data2)
-
-
 
 mat<-as.matrix(genomic[,2:length(genomic)])
 row.names(mat)<-genomic$Sample
