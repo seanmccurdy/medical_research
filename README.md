@@ -1,3 +1,3 @@
-# Sig2survival program
+# Sig2Survival program
 
 
