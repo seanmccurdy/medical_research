@@ -1,10 +1,11 @@
-library(data.table)
-library(survival)
-
+#### date created: November 2014
 #### data files can be downloaded from cancerbrowser
-####https://genome-cancer.ucsc.edu/download/public/HiSeqV2_PANCAN-2015-02-15.tgz
+#### https://genome-cancer.ucsc.edu/download/public/HiSeqV2_PANCAN-2015-02-15.tgz
 #### TCGA_pancan_normalized_RNAseq_data_ver_feb06_2015.txt = genomic
 #### TCGA_pancan_clinical_data_ver_feb06_2015.txt = clinical
+
+library(survival)
+library(data.table)
 
 setwd("~/Dropbox/Programs/databases")
 data2 <- fread("TCGA_pancan_normalized_RNAseq_data_ver_feb06_2015.txt", header=T, sep="\t", stringsAsFactors=F)
